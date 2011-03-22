@@ -1,0 +1,245 @@
+/* section: floating
+---------------------------------------------- */
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+/* ------------------------------------------- */
+
+/* section: clearing
+---------------------------------------------- */
+.clear {
+  clear: both;
+}
+
+.clearfix:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/* links */
+a:link, a:visited {
+  color: #2276BB;
+  text-decoration: none;
+  -webkit-transition: color .2s linear;
+}
+
+a:hover, a:active {
+ 	text-decoration: underline;
+}
+
+
+body{
+	background: #e6eaef;
+	color: #2c2c2c;
+	font-family:"Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+	font-size: 12px;
+}
+
+/* wrapper */
+#wrapper{
+	margin: 1em auto;
+	width: 850px;
+}
+
+/* header */
+#header {
+	margin: 0 0 14px 0; /* 15px - 1px white drop-shadow */
+ 	padding: 0 15px;
+}
+
+#header h1{
+  	float: left;
+}
+
+#header ul{
+  	float: right;
+}
+
+#header ul li {
+	color: #a3a7ae;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 25px; /* height of logo without drop-shadow */
+	margin: 0 20px 0 0;
+	text-shadow: 0 1px 1px #fff;
+}
+
+/* main */
+#main{
+	background-color: #DDEEF6;
+	border: 1px solid #ced2d8;
+	border-radius:5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	font-size: 14px;
+	margin: 0 0 15px 0;
+	min-height: 500px;
+}
+/* primary */
+#primary{
+  	float:left;
+  	background: #fff;
+  	min-height: 500px;
+  	border-right: 1px solid #C0DEED;
+  	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 3px 4px #999999;
+	-webkit-box-shadow: 0 3px 4px #999999;
+}
+#textbox_container{
+	padding: 20px;
+}
+#textbox{
+	border:1px solid #ccc;
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	-webkit-box-shadow:0 1px #fff;
+	-moz-box-shadow:0 1px #fff;
+	box-shadow:0 1px #fff;
+	padding:8px;
+	width:540px;
+	height:56px;
+	color:#222;
+	font:14px/18px "Helvetica Neue",Arial,sans-serif;
+	outline:none;
+	_width:442px;
+	overflow-x:hidden;
+	overflow-y:auto;
+	white-space:pre-wrap;
+	word-wrap:break-word;
+}
+	
+textarea#textbox:focus{
+	outline:none;
+	border:1px solid rgba(82,168,236,.75)!important;
+	-moz-box-shadow:0 0 5px rgba(82,168,236,.5);
+	-webkit-box-shadow:0 0 5px rgba(82,168,236,.5);
+}
+
+#publishbtn{
+	margin-top: 10px;
+}
+
+#publishbtn input{
+	float: right;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: 0 1px 0 #f8f8f8;
+	-moz-box-shadow: 0 1px 0 #f8f8f8;
+	-webkit-box-shadow: 0 1px 0 #f8f8f8;
+	background: url("/static/images/bg-btn.gif") repeat-x #DDD;
+	border-color: #CCC;
+	border-style: solid;
+	border-width: 1px;
+	color: #333;
+	padding: 5px 15px;
+	font-size: 15px;
+	font-weight: 300;
+	text-shadow: 0 1px #F0F0F0;
+}
+
+#publishbtn input:focus, #publishbtn input:hover{
+	background-position: 0 -6px;
+}
+
+#content{
+	width: 600px;
+}
+
+#content>ul>li{
+	display: block;
+	padding: 10px 25px;
+	position:relative;
+	border-bottom: 1px solid #EFEFEF;
+	overflow: visible;
+	padding: 10px 25px 5px 2px;
+}
+
+#content>ul>li:first-child{
+	border-top: 1px solid #EFEFEF;
+}
+
+#content>ul>li:hover{
+	background: rgba(0, 132, 180, 0.1);
+	border-color:rgba(0, 132, 180, 0.15);
+}
+
+
+
+.operations{
+	position: absolute;
+	right: 25px;
+	bottom: 8px;
+	display: none;
+}
+
+.operations li{
+	display: inline-block;
+	margin: 0 4px;
+}
+
+.operations li a{
+	background-image: url("/static/images/operations.png");
+	background-repeat: no-repeat;
+	display: inline-block;
+	text-indent: -9999em;
+	height: 10px;
+	width: 10px;
+}
+
+.editbtn{
+	background-position: 0 0;
+}
+
+.editbtn:hover{
+	background-position: 0 -20px;
+}
+
+.trashbtn{
+	background-position: 0 -40px;
+}
+
+.trashbtn:hover{
+	background-position: 0 -60px;
+}
+
+.viewbtn{
+	background-position: 0 -79px;
+	height: 9px;
+}
+
+.viewbtn:hover{
+	background-position: 0 -98px;
+}
+
+/*secondary*/
+#secondary{
+	float: right;
+	width: 247px;
+	
+	
+	
+	-moz-border-radius-topright: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+}
+
+#nav li a{
+	display: block; 
+	padding: 8px 0 8px 30px;
+}
+
+#nav li a:hover{
+	background-color: #EDFEFF;
+}

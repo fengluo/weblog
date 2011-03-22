@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<title>Setting</title>
+	
+</head>
+
+<body>
+<b>Site Meta</b>
+<form action="updatesitemeta" method="post" accept-charset="utf-8">
+	<p><label for="sitetitle">Site Title</label><input type="text" name="sitetitle" value="{{sitemeta.sitetitle}}" id="sitetitle">
+	<p><label for="tagline">Tagline</label><input type="text" name="tagline" value="{{sitemeta.tagline}}" id="tagline"></p>
+	<p><label for="bio">Bio</label><input type="text" name="bio" value="{{sitemeta.bio}}" id="bio">
+	<p><input type="submit" value="Update"></p>
+</form>
+<b>Sync</b>
+<p>Twitter</p>
+{% if usermeta.oauth == "1"%}
+{{usermeta.twitter_name}}
+<img src={{usermeta.twitter_profile_image_url}} />
+{{username}}
+{% else %}
+<a href="twitter/auth">Auth</a>
+{% endif %}
+</body>
+</html>

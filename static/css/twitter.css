@@ -1,0 +1,103 @@
+/*li.status{
+	border-bottom: 1px solid #EFEFEF;
+	display: block;
+	padding: 10px 25px;
+	position: relative;
+	font-size: 14px;
+	width: 540px;
+}*/
+
+.status_avatar{
+	height:48px;
+	width:48px;
+	left:5px;
+	padding:1px;
+	position:absolute;
+}
+
+.status_avatar img{
+	height:48px;
+	width:48px;
+}
+
+.status_body{
+	display:block;
+	line-height:22px;
+	margin-left:60px;
+	overflow:hidden;
+	position:relative;
+}
+
+.status_user{
+	font-weight:bold;
+}
+
+.status_info{
+	height:22px;
+	width:100%;
+	margin:5px 0;
+	color:#999;
+	text-align:left;
+	display:block;
+	font-size:11px;
+	overflow:hidden;
+}
+
+.status_info span{
+	display:inline-block;
+	margin:0 0 3px;
+	padding:0 1px;
+}
+
+.status_operations{
+	bottom: 10px;
+	line-height: 1.25em;
+	position: absolute;
+	right: 0;
+	visibility: hidden;
+}
+
+#content>ul>li:hover .status_operations{
+	visibility: visible;
+}
+
+.status_operations a{
+	display: inline-block;
+	height: 16px;
+	overflow: hidden;
+	text-indent: -9999em;
+	width: 21px;
+	background-image: url("/static/images/operations_icons.png");
+	background-repeat: no-repeat;
+}
+
+.status_operations .favbtn{
+	background-position: 2px -32px;
+}
+
+.status_operations .favbtn:hover{
+	background-position: -19px -32px;
+}
+.status_operations .replybtn{
+	background-position: 4px 1px;
+}
+
+.status_operations .replybtn:hover{
+	background-position: -17px 1px;
+}
+
+.status_operations .rtbtn{
+	background-position: 0px -63px;
+}
+
+.status_operations .rtbtn:hover{
+	background-position: -21px -63px;
+}
+
+.status_operations .trashbtn{
+	background-position: 0px -47px;
+}
+
+.status_operations .trashbtn:hover{
+	background-position: -21px -47px;
+}

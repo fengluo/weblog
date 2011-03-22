@@ -1,0 +1,39 @@
+{% extends "desktop/home.html" %}
+
+{% block title %}Home|Twitter{% endblock %}
+{% block css %}	
+<link rel="stylesheet" href="/static/css/twitter.css" type="text/css" media="screen" title="no title" charset="utf-8">
+{% endblock %}
+{% block content %}	
+{% if statuses%}
+	<ul id="statuses">
+      	{% for status in statuses %}
+      		<li class="status">
+          	<span class="status_avatar"><a href="/twitter/user/{{ status.user.screen_name }}"><img src="{{ status.user.profile_image_url }}" /></a>
+		</span>
+		<span class="status_body">
+          	    <span class="status_text">
+				<a class="status_user" href="/twitter/user/{{ status.user.screen_name }}">{{ status.user.screen_name }}</a>
+				<span class="tweet">{{ status.text|safe|urlize }}</span>
+          	    </span>
+          	    <span class="status_info">
+				<span class="status_source">from {{ status.source|safe }}</span>
+				<span class="status_time">{{ status.datetime|timesince }} ago </span>
+				</span>
+			</span>
+			<span class="status_operations">
+				<a class="favbtn" href=''>Fav</a>
+				<a class="replybtn" href=''>Reply</a>
+				<a class="rtbtn" href=''>Retweet</a>
+				{% if status.user.screen_name == twitteruser.twitter_screen_name %}
+				<a class="trashbtn" href=''>Trash</a>
+				{% endif %}
+			</span>
+		</span>
+		</li>
+      	{% endfor %}
+	</ul>
+{% else %}
+	<p>No Tweets</p>
+{% endif %}
+{% endblock %}

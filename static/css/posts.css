@@ -1,0 +1,28 @@
+li.post{
+	border-bottom: 1px solid #EFEFEF;
+	display: block;
+	
+	position: relative;
+	font-size: 14px;
+}
+
+li.post:first-child{
+	border-top: 1px solid #EFEFEF;
+}
+
+li.post:hover{
+	background: rgba(0, 132, 180, 0.1);
+	border-color:rgba(0, 132, 180, 0.15);
+}
+
+li.post:hover .operations{
+	display: block;
+}
+
+.post_time{
+	display: block;
+	font-size: 12px;
+	color: #999;
+	margin-top:10px;
+	line-height: 1.25em;
+}
